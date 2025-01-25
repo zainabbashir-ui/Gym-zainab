@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+     body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .navbar-custom {
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: #fff; /* White text for visibility */
+        }
+        .navbar-custom .navbar-brand span {
+            color: #ff6347; /* Specific color for part of the brand name */
+        }
+       .navbar{
+        z-index: 1000;
+       }
+
+.hero-section {
+    background: url(g10.webp) no-repeat center center;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* dark overlay */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content a {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    color: #ff6347;
+}
+table {
+    text-align: center;
+}
+
+td {
+    vertical-align: middle;
+}
+
+.gym {
+    background-color: #f19762;
+}
+
+.crossfit {
+    background-color: #efab67;
+}
+
+.cardio {
+    background-color: #eb9c61;
+}
+
+.body {
+    background-color: #e8bb66;
+}
+
+.yoga {
+    background-color: #a3a8a3;
+}
+
+.running {
+    background-color: #b2b0ad;
+}
+
+.box {
+    background-color: #a3a39e;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #f8f9fa;
+    color: #000;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.nav-tabs .nav-link {
+    color: #495057;
+}
+
+.container-Schedule {
+    margin-top: 20px;
+    width: 1300px;
+    margin-left: 30px;
+}
+
+.container-class{
+    margin-top: 20px;
+    width: 1100px;
+    margin-left: 120px;
+}
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    /* transition: transform 0.2s; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* background-color: #8a8787; */
+    /* color: white; */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   
+}
+
+.card-img-wrapper {
+    position: relative;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-price {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    display: none;
+  
+    background-color: #ff6347;
+}
+
+.card:hover .card-price {
+    display: block;
+}
+
+.footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 40px 0;
+}
+.footer h5 {
+    font-weight: bold;
+}
+.footer p, .footer a {
+    color: #fff;
+}
+.footer a:hover {
+    text-decoration: none;
+    color: #fc7e1e;
+}
+.footer .form-control {
+    width: 300px;
+    max-width: 100%;
+}
+.footer .btn-danger {
+    background: linear-gradient(to right, #ffc371, #ff5f6d);
+    border-color: #d9534f;
+}
+ .btn-danger:hover{
+    background: linear-gradient(to right,  #ff5f6d,#ffc371);
+    
+}
+</style>
+<html>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <a class="navbar-brand" href="#" style="color: black; font-size:x-large;">Fit<span>Zen.</span>.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="GymWeb.html" target="_blank">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="GymAbout.html" target="_blank">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="GymClasses.html" target="_blank">Classes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="GymContact.html" target="_blank">Contact Us</a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="btn " href="#" style="background-color: #ff6347;" >Become a member</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>FitZen.. Schedule</h1>
+            <a href="GymWeb.html">Home </a> &nbsp; &nbsp;<a href="#">Classes</a> 
+        </div>
+    </div>
+<br>
+<br>
+<br>
+<div class="container-class">
+    <h1 class="text-center my-4" style="font-weight: bold;">UNLIMITED CLASSES</h1>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="yoga.jpg" class="card-img-top" alt="Yoga">
+                    <div class="card-price">$20</div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Yoga</h5>
+                    <p class="card-text">Ryan Knight</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="karate.jpg" class="card-img-top" alt="Karate">
+                    <div class="card-price">$25</div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Karate</h5>
+                    <p class="card-text">Kevin McCormick</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="running.jpg" class="card-img-top" alt="Running">
+                    <div class="card-price">$15</div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Running</h5>
+                    <p class="card-text">Randy Rivera</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="dance.jpg" class="card-img-top" alt="Dance">
+                    <div class="card-price">$18</div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Dance</h5>
+                    <p class="card-text">Russell Lang</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="personal_training.jpg" class="card-img-top" alt="Personal Training">
+                    <div class="card-price">$30</div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Personal Training</h5>
+                    <p class="card-text">Cole Robertson</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="weight.JPG" class="card-img-top" alt="Weight Loss">
+                    <div class="card-price">$22</div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Weight Loss</h5>
+                    <p class="card-text">Ryan Scott</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="box.jpg" class="card-img-top" alt="Box">
+                    <div class="card-price">$20</div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Box</h5>
+                    <p class="card-text">Chester Bowen</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="cardio.jpg" class="card-img-top" alt="Cardio">
+                    <div class="card-price">$20</div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Cardio</h5>
+                    <p class="card-text">Jorge Fernandez</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="crossfit.jpg" class="card-img-top" alt="Crossfit">
+                    <div class="card-price">$25</div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Crossfit</h5>
+                    <p class="card-text">Chester Bowen</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="container-Schedule">
+        <h1 class="text-center mt-5" style="font-weight: bolder; padding-bottom: 20px;">CLASS TIMETABLE</h1>
+        <ul class="nav nav-tabs justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">All Class</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Gym</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Crossfit</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Cardio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Body</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Yoga</a>
+            </li>
+        </ul>
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10.00</td>
+                    <td class="gym">GYM<br>10.00 - 11.00<br>John Smith</td>
+                    <td></td>
+                    <td class="yoga">YOGA<br>10.00 - 12.00<br>John Smith</td>
+                    <td></td>
+                    <td class="body">BODY<br>10.00 - 12.00<br>John Smith</td>
+                    <td></td>
+                    <td class="cardio">CARDIO<br>10.00 - 11.00<br>John Smith</td>
+                </tr>
+                <tr>
+                    <td>14.00</td>
+                    <td></td>
+                    <td class="running">RUNNING<br>14.00 - 16.00<br>John Smith</td>
+                    <td></td>
+                    <td class="box">BOX<br>14.00 - 15.00<br>John Smith</td>
+                    <td></td>
+                    <td class="gym">GYM<br>14.00 - 16.00<br>John Smith</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>16.00</td>
+                    <td class="cardio">CARDIO<br>16.00 - 18.00<br>John Smith</td>
+                    <td></td>
+                    <td class="gym">GYM<br>16.00 - 19.00<br>John Smith</td>
+                    <td></td>
+                    <td class="yoga">YOGA<br>16.00 - 18.00<br>John Smith</td>
+                    <td></td>
+                    <td class="gym">GYM<br>16.00 - 20.00<br>John Smith</td>
+                </tr>
+                <tr>
+                    <td>18.00</td>
+                    <td class="box">BOX<br>18.00 - 22.00<br>John Smith</td>
+                    <td class="body">BODY<br>18.00 - 20.00<br>John Smith</td>
+                    <td></td>
+                    <td class="crossfit">CROSSFIT<br>18.00 - 21.00<br>John Smith</td>
+                    <td></td>
+                    <td class="cardio">CARDIO<br>18.00 - 22.00<br>John Smith</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>20.00</td>
+                    <td></td>
+                    <td class="gym">GYM<br>20.00 - 22.00<br>John Smith</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="crossfit">CROSSFIT<br>20.00 - 21.00<br>John Smith</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer class="footer mt-auto py-3 bg-dark text-white">
+        <div class="containe5r">
+            <div class="row">
+                <!-- <div class="col-md-4">
+                    <h5>Phone</h5>
+                    <p>(123) 118 9999 </p>
+                </div> -->
+                <div class="col-md-6" style="text-align: center;">
+                    <h5>Address</h5>
+                    <p>72-G, Manhattan Street 12 , Multan.</p>
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                    <h5>Email</h5>
+                    <p>contactcompany@FitZen..com</p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <h5>Subscribe to our mailing list</h5>
+                    <form class="form-inline justify-content-center">
+                        <div class="form-group mb-2">
+                            <input type="email" class="form-control" placeholder="Enter Your Mail">
+                        </div>
+                        <button type="submit" class="btn btn-danger mb-2 ml-2">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <!-- <p>© Copyright ©2024 All rights reserved | This template is made with <span class="text-danger">❤</span> by Colorlib</p>-->
+                    <a href="#" class="text-white mx-2">Terms & Use</a> 
+                    <a href="#" class="text-white mx-2">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <br>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .navbar-custom {
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: #fff; /* White text for visibility */
+        }
+        .navbar-custom .navbar-brand span {
+            color: #ff6347; /* Specific color for part of the brand name */
+        }
+       .navbar{
+        z-index: 1000;
+       }
+
+.hero-section {
+    background: url(g13.avif) no-repeat center center;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* dark overlay */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content a {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    color: #ff6347;
+}
+
+.containerslogan{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      background-color:rgb(255, 255, 255);
+    }
+    .box1{  
+        height: 150px;
+        width: 600px;
+        margin: 10px;
+    }
+    .headingg {
+        font-weight: 40px;
+    }
+ .headingg p{
+         font-size: 22px;
+} 
+.coach-img {
+      width: 100%;
+      height: 250px;
+      z-index: 1000;
+    }
+    .coach-name {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .coach-title {
+      color: gray;
+      font-size: 17px;
+    }
+    .section-title {
+            position: relative;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-weight: bold;
+            z-index: 2;
+            position: relative;
+        }
+
+        .section-title::before {
+            content: "TRAINERS";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-top: 20px;
+            letter-spacing: 30px;
+            transform: translateX(-50%);
+            font-size: 90px;
+            color: rgba(247, 43, 12, 0.2);
+            z-index: 1;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col-md-6{
+           z-index: 100 ;
+        }
+.footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 40px 0;
+}
+.footer h5 {
+    font-weight: bold;
+}
+.footer p, .footer a {
+    color: #fff;
+}
+.footer a:hover {
+    text-decoration: none;
+    color: #fc7e1e;
+}
+.footer .form-control {
+    width: 300px;
+    max-width: 100%;
+}
+.footer .btn-danger {
+    background: linear-gradient(to right, #ffc371, #ff5f6d);
+    border-color: #d9534f;
+}
+ .btn-danger:hover{
+    background: linear-gradient(to right,  #ff5f6d,#ffc371);
+    
+}
+
+</style>
+<body>
+    
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <a class="navbar-brand" href="#" style="color: black; font-size:x-large;">Fit<span>Zen.</span>.</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="GymWeb.html" target="_blank">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="GymAbout.html" target="_blank">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="GymClasses.html" target="_blank">Classes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="GymContact.html" target="_blank">Contact Us</a>
+            </li>
+        
+            <li class="nav-item">
+                <a class="btn " href="#" style="background-color: #ff6347;" >Become a member</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="hero-section">
+    <div class="hero-content">
+        <h1> About FitZen..</h1>
+        <a href="GymWeb.html">Home </a> &nbsp; &nbsp;<a href="#">About</a> 
+    </div>
+</div>
+<br>
+<br>
+<br>
+   <div class="containerslogan">
+     <div class="box1"> 
+            <div class="headingg">
+            <p style="text-align: center;"> We believe that fitness is a journey to personal wellness, where consistency and dedication lead to transformative results. Yoga, a vital part of this journey, harmonizes the mind, body, and spirit, fostering inner peace and physical strength.</p></div>
+        </div>
+   </div>
+<br>
+<br>
+<br>
+<div class="container text-center my-5">
+    <div class="section-title">
+        <h2 class="text-center" style="font-weight: bolder; padding-bottom: 20px;">OUR TRAINERS</h2> 
+    </div>
+    <div class="row mt-4">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <img src="gtra.avif" alt="Mark Brook" class="coach-img">
+        <div class="coach-name">Mark Brook</div>
+        <div class="coach-title">Owner / Head Coach</div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <img src="gtra2.PNG" alt="Sarah Henderson" class="coach-img">
+        <div class="coach-name">Victor George</div>
+        <div class="coach-title">Owner / Head Coach</div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <img src="grta.PNG" alt="George Hump" class="coach-img">
+        <div class="coach-name">George Hump</div>
+        <div class="coach-title">Owner / Head Coach</div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <img src="grtr.PNG" alt="Victor Hump" class="coach-img">
+        <div class="coach-name">Sarah Henderson</div>
+        <div class="coach-title">Owner / Head Coach</div>
+      </div>
+    </div>
+  </div>
+  <br>
+<br>
+<footer class="footer mt-auto py-3 bg-dark text-white">
+    <div class="containe5r">
+        <div class="row">
+            <!-- <div class="col-md-4">
+                <h5>Phone</h5>
+                <p>(123) 118 9999 </p>
+            </div> -->
+            <div class="col-md-6" style="text-align: center;">
+                <h5>Address</h5>
+                <p>72-G, Manhattan Street 12 , Multan.</p>
+            </div>
+            <div class="col-md-6" style="text-align: center;">
+                <h5>Email</h5>
+                <p>contactcompany@FitZen..com</p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <h5>Subscribe to our mailing list</h5>
+                <form class="form-inline justify-content-center">
+                    <div class="form-group mb-2">
+                        <input type="email" class="form-control" placeholder="Enter Your Mail">
+                    </div>
+                    <button type="submit" class="btn btn-danger mb-2 ml-2">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <!-- <p>© Copyright ©2024 All rights reserved | This template is made with <span class="text-danger">❤</span> by Colorlib</p>-->
+                <a href="#" class="text-white mx-2">Terms & Use</a> 
+                <a href="#" class="text-white mx-2">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-dribbble"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<br><br>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

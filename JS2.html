@@ -1,0 +1,159 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<style>
+    #colorDisplay{
+        height: 150px;
+        width: 150px;
+        border: 2px solid rgb(52, 223, 174) ;
+        margin-top: 20px;
+        margin-left: 90px;
+    }
+    .yellow{
+        background-color: yellow;
+    }
+    .orange{
+        background-color: orangered;
+    }
+    .pink{
+        background-color: palevioletred;
+    }
+    .purple{
+        background-color: purple;
+    }
+    .blue{
+        background-color: blue;
+    }
+</style>
+<body>
+    <h1>KINDLY SUBMIT THE FORM</h1>
+    <input type="text" name="name" id="name" placeholder="Name"> <br>
+    <input type="password" name="password" id="password" placeholder="Password"><br>
+    <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password"><br>
+    <input type="email" name="email" id="email" placeholder="Email"><br>
+    <button onclick="show()">Submit</button> <br>
+    <br>
+    <br>
+    
+    <!-- ---------------- -->
+    <h1>OPERATIONS</h1>
+    <input type="text" name="" id="num1"> <br>
+    <input type="text" name="" id="num2"> <br>
+    <button onclick="addNumbers()">Add</button> <br>
+    <button onclick="subNumbers()">Subtract</button> <br>
+    <button onclick="mulNumbers()">Multiply</button> <br>
+    <button onclick="divNumbers()">Divide</button> <br>
+    
+    <p id="result"></p>  &nbsp;&nbsp; 
+    <br>
+    <br>
+    <!-- ---------------------- -->
+     <h1>COLOR BOXES</h1>
+     <div id="colorDisplay"></div><br>
+     <button onclick="setYellow()"> Yellow </button> &nbsp;&nbsp;
+     <button onclick="setOrange()"> Orange </button>&nbsp;&nbsp;
+     <button onclick="setPink()"> Pink </button>&nbsp;&nbsp;
+     <button onclick="setPurple()"> Purple </button>&nbsp;&nbsp;
+     <button onclick="setBlue()"> Blue </button> &nbsp;&nbsp;
+     <!-- ---------------------- -->
+      
+
+    <script>
+        // const show = () => {
+        //     let name = document.getElementById('name').value;
+        //     let password = document.getElementById('password').value;
+        //     let cpassword = document.getElementById('cpassword').value;
+        //     let email = document.getElementById('email').value;
+
+        //     if (name.trim() === "") {
+        //         alert("Please write your valid name");
+        //     } else if (password.length < 8 || password.length > 12) {
+        //         alert("Password length must be between 8 and 12 characters");
+        //     } else if (password !== cpassword) {
+        //         alert("Passwords do not match");
+        //     } else if (!email.includes("@")) {
+        //         alert("Email must include the @ symbol");
+        //     } else {
+        //         alert("Submitted successfully");
+        //     }
+        //}
+        const addNumbers=()=>{
+            const num1=parseFloat(document.getElementById("num1").value)
+            const num2=parseFloat(document.getElementById("num2").value)
+            document.getElementById("result").innerHTML=num1+num2
+        }
+        const subNumbers=()=>{
+            const num1=parseFloat(document.getElementById("num1").value)
+            const num2=parseFloat(document.getElementById("num2").value)
+            document.getElementById("result").innerHTML=num1-num2
+        }
+        const mulNumbers=()=>{
+            const num1=parseFloat(document.getElementById("num1").value)
+            const num2=parseFloat(document.getElementById("num2").value)
+            document.getElementById("result").innerHTML=num1*num2
+        }
+        const divNumbers=()=>{
+            const num1=parseFloat(document.getElementById("num1").value)
+            const num2=parseFloat(document.getElementById("num2").value)
+            document.getElementById("result").innerHTML=num1/num2
+        }
+       
+        // Color boxes
+         function setYellow(){
+            let colorDisplay=document.getElementById("colorDisplay")
+            colorDisplay.classList.add("yellow")
+            colorDisplay.classList.remove("orange")
+            colorDisplay.classList.remove("pink")
+            colorDisplay.classList.remove("purple")
+            colorDisplay.classList.remove("blue")
+
+         }
+         function setOrange(){
+            let colorDisplay=document.getElementById("colorDisplay")
+            colorDisplay.classList.remove("yellow")
+            colorDisplay.classList.add("orange")
+            colorDisplay.classList.remove("pink")
+            colorDisplay.classList.remove("purple")
+            colorDisplay.classList.remove("blue")
+
+         }
+         function setPink(){
+            let colorDisplay=document.getElementById("colorDisplay")
+            colorDisplay.classList.remove("yellow")
+            colorDisplay.classList.remove("orange")
+            colorDisplay.classList.add("pink")
+            colorDisplay.classList.remove("purple")
+            colorDisplay.classList.remove("blue")
+
+         }
+         function setPurple(){
+            let colorDisplay=document.getElementById("colorDisplay")
+            colorDisplay.classList.remove("yellow")
+            colorDisplay.classList.remove("orange")
+            colorDisplay.classList.remove("pink")
+            colorDisplay.classList.add("purple")
+            colorDisplay.classList.remove("blue")
+
+         }
+         function setBlue(){
+            let colorDisplay=document.getElementById("colorDisplay")
+            colorDisplay.classList.remove("yellow")
+            colorDisplay.classList.remove("orange")
+            colorDisplay.classList.remove("pink")
+            colorDisplay.classList.remove("purple")
+            colorDisplay.classList.add("blue")
+
+
+            
+         }
+
+        
+       </script>
+</body>
+</html>

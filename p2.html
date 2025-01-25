@@ -1,0 +1,214 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    background-color: #f8f9fa;
+}
+
+.navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.gallery-container {
+    padding-top: 30px;
+}
+
+.gallery-item {
+    margin-bottom: 30px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Gallery</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" data-filter="all">All Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-filter="fitness">Fitness</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-filter="coaching">Coaching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-filter="event">Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-filter="other">Other</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container gallery-container">
+        <div class="row">
+            <div class="col-md-4 gallery-item" data-category="fitness">
+                <img src="g1.avif" class="img-fluid" alt="Fitness Image 1">
+            </div>
+            <div class="col-md-4 gallery-item" data-category="fitness">
+                <img src="g5.jpeg" class="img-fluid" alt="Fitness Image 2">
+            </div>
+            <div class="col-md-4 gallery-item" data-category="coaching">
+                <img src="g3.webp" class="img-fluid" alt="Coaching Image 1">
+            </div>
+            <div class="col-md-4 gallery-item" data-category="event">
+                <img src="g6.jpeg" class="img-fluid" alt="Event Image 1">
+            </div>
+            <div class="col-md-4 gallery-item" data-category="event">
+                <img src="g8.jpeg" class="img-fluid" alt="Event Image 2">
+            </div>
+            <div class="col-md-4 gallery-item" data-category="other">
+                <img src="g12.webp" class="img-fluid" alt="Other Image 1">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js">
+        $(document).ready(function() {
+    $('.nav-link').click(function() {
+        var filter = $(this).attr('data-filter');
+        
+        $('.nav-link').removeClass('active');
+        $(this).addClass('active');
+        
+        if (filter === 'all') {
+            $('.gallery-item').show();
+        } else {
+            $('.gallery-item').hide();
+            $('.gallery-item[data-category="' + filter + '"]').show();
+        }
+        
+        return false;
+    });
+});
+
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    background-color: #f8f9fa;
+}
+
+.navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.gallery-container {
+    padding-top: 30px;
+}
+
+.gallery-item {
+    margin-bottom: 30px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Gallery</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" data-filter="all">All Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-filter="fitness">Fitness</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-filter="coaching">Coaching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-filter="event">Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-filter="other">Other</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container gallery-container">
+        <div class="row">
+            <div class="col-md-4 gallery-item" data-category="fitness">
+                <img src="g1.avif" class="img-fluid" alt="Fitness Image 1">
+            </div>
+            <div class="col-md-4 gallery-item" data-category="fitness">
+                <img src="g10.webp" class="img-fluid" alt="Fitness Image 2">
+            </div>
+            <div class="col-md-4 gallery-item" data-category="coaching">
+                <img src="g11.webp" class="img-fluid" alt="Coaching Image 1">
+            </div>
+            <div class="col-md-4 gallery-item" data-category="event">
+                <img src="g12.webp" class="img-fluid" alt="Event Image 1">
+            </div>
+            <div class="col-md-4 gallery-item" data-category="event">
+                <img src="g6.jpeg" class="img-fluid" alt="Event Image 2">
+            </div>
+            <div class="col-md-4 gallery-item" data-category="other">
+                <img src="g5.jpeg" class="img-fluid" alt="Other Image 1">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js">
+        $(document).ready(function() {
+    $('.nav-link').click(function() {
+        var filter = $(this).attr('data-filter');
+        
+        $('.nav-link').removeClass('active');
+        $(this).addClass('active');
+        
+        if (filter === 'all') {
+            $('.gallery-item').show();
+        } else {
+            $('.gallery-item').hide();
+            $('.gallery-item[data-category="' + filter + '"]').show();
+        }
+        
+        return false;
+    });
+});
+
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

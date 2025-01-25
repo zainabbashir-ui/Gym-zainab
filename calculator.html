@@ -1,0 +1,105 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA</title>
+</head>
+<body>
+    
+    <h1>CGPA AND PERCENTAGE CALCULATOR</h1>
+    <input type="number" name="" id="subject1"><br>
+    <input type="number" name="" id="subject2"><br>
+    <input type="number" name="" id="subject3"><br>
+    <input type="number" name="" id="subject4"><br>
+    <input type="number" name="" id="subject5"><br>
+    <button onclick="calculate()"> Calculate Marks</button> <br>
+    <p id="result"></p>
+</body>
+<script>
+     //  CGPA AND % CALCULATOR
+     function calculate(){
+            const marks1=parseFloat(document.getElementById("subject1").value)
+            const marks2=parseFloat(document.getElementById("subject2").value)
+            const marks3=parseFloat(document.getElementById("subject3").value)
+            const marks4=parseFloat(document.getElementById("subject4").value)
+            const marks5=parseFloat(document.getElementById("subject5").value)
+
+            let totalMarks = marks1 + marks2 + marks3 + marks4 + marks5;
+            let maxMarks = 500;
+            let percentage = (totalMarks / maxMarks)*100;
+
+            let CGPA;
+            if (percentage>=80){
+                CGPA=4.0
+            }
+            else if(percentage >=70){
+                CGPA=3.0 + (percentage-70)/10*1.0
+            }
+            else if(percentage >=60){
+                CGPA=2.0 + (percentage-60)/10*1.0
+            }
+            else if(percentage >=50){
+                CGPA=1.0 + (percentage-50)/10*1.0
+            }
+            else {
+                CGPA=0.0
+            }
+             document.getElementById("result").innerHTML= `percentage ${percentage.toFixed(2)}
+              % <br> CGPA:${CGPA.toFixed(2)}` 
+               }
+
+</script>
+</html> 
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Marks</title>
+</head>
+<body>
+
+    <input type="number" id="subject1" placeholder="Enter marks for subject 1"><br>
+    <input type="number" id="subject2" placeholder="Enter marks for subject 2"><br>
+    <input type="number" id="subject3" placeholder="Enter marks for subject 3"><br>
+    <input type="number" id="subject4" placeholder="Enter marks for subject 4"><br>
+
+    <button onclick="calculate()">Calculate Marks</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            // Get marks from input fields
+            const marks1 = parseFloat(document.getElementById("subject1").value) || 0;
+            const marks2 = parseFloat(document.getElementById("subject2").value) || 0;
+            const marks3 = parseFloat(document.getElementById("subject3").value) || 0;
+            const marks4 = parseFloat(document.getElementById("subject4").value) || 0;
+
+            // Calculate total marks and percentage
+            const totalMarks = marks1 + marks2 + marks3 + marks4;
+            const maxMarks = 400;
+            const percentage = (totalMarks / maxMarks) * 100;
+            
+            let cgpa;
+
+            // Calculate CGPA based on percentage
+            if (percentage >= 80) {
+                cgpa = 4.0;
+            } else if (percentage >= 70) {
+                cgpa = 3.0 + (percentage - 70) / 10 * 1.0;
+            } else if (percentage >= 60) {
+                cgpa = 2.0 + (percentage - 60) / 10 * 1.0;
+            } else if (percentage >= 50) {
+                cgpa = 1.0 + (percentage - 50) / 10 * 1.0;
+            } else {
+                cgpa = 0;
+            }
+
+             }
+    </script>
+
+</body>
+</html> -->

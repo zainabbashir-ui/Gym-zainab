@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Selector</title>
+    <style>
+        body {
+           
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .container {
+            margin: 50px;
+        }
+        .color-picker {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .color-box {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="color-picker">
+            <label for="colorPicker">Select Color: </label>
+            <input type="color" id="colorPicker" name="colorPicker">
+        </div>
+        <div class="color-box" id="colorBox">
+            <p>Change my colors!</p>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        <div class="color-picker">
+            <label for="bgColor">Select Background Color: </label>
+            <input type="color" id="bgColor" name="bgColor">
+        </div>
+        <div class="color-picker">
+            <label for="textColor">Select Text Color: </label>
+            <input type="color" id="textColor" name="textColor">
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit.</p>
+    </div>
+
+
+
+    <script>
+        const colorPicker = document.getElementById('colorPicker');
+        const colorBox = document.getElementById('colorBox');
+
+        colorPicker.addEventListener('input', () => {
+            const selectedColor = colorPicker.value;
+            colorBox.style.backgroundColor = selectedColor;
+            colorBox.style.color = selectedColor;
+        });
+        const bgColorInput = document.getElementById('bgColor');
+        const textColorInput = document.getElementById('textColor');
+
+        bgColorInput.addEventListener('input', () => {
+            document.body.style.backgroundColor = bgColorInput.value;
+        });
+
+        textColorInput.addEventListener('input', () => {
+            document.body.style.color = textColorInput.value;
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+       
+   

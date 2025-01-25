@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moving Numbers</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .counter {
+      text-align: center;
+      font-size: 15px;
+      color: #d3a62b;
+    }
+    .counter-value {
+      display: inline-block;
+    }
+    .container{
+        background-color: #d7c081;
+        width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="counter">
+          <span class="counter-value" data-count="2000">0</span>
+          <p>Happy Costumers</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="counter">
+          <span class="counter-value" data-count="340">0</span>
+          <p>Yoga & Gym Workshops</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="counter">
+          <span class="counter-value" data-count="10">0</span>
+          <p>Years Of Experience</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="counter">
+          <span class="counter-value" data-count="150">0</span>
+          <p>Sessions Conducted</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.counter-value').each(function() {
+        var $this = $(this),
+            countTo = $this.attr('data-count');
+        $({ countNum: $this.text()}).animate({
+          countNum: countTo
+        },
+        {
+          duration: 2000,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
